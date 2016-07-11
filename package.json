@@ -1,0 +1,21 @@
+{
+  "name": "esaws",
+  "version": "0.0.0",
+  "description": "Manage AWS EC2 Container Service",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "babel-node tools/deploy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Harald Rudell <c@haraldrudell.com> (http://haraldrudell.com)",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.4.6"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-es2016": "^6.11.0",
+    "babel-preset-stage-0": "^6.5.0"
+  }
+}
