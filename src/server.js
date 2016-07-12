@@ -1,1 +1,31 @@
-console.log('server first line')
+import express from 'express'
+
+class RestServer {
+  constructor() {
+    this.throwError = this.throwError.bind(this)
+    new Promise((resolve, reject) => {
+      this.app = express()
+      this.app.get('*', this.handleRequest.bind(this))
+      this.server = this.app.listen(3002, '127.0.0.1', e => {
+        if (!e) resolve(this.server.address())
+        else reject(e)
+      })
+    }).then(this.serverIsUp.bind(this))
+    .catch(e => process.nextTick(this.throwError, e))
+  }
+
+  serverIsUp(a) {
+    console.log(`Listening on http://${a.address}:${a.port}`)
+  }
+
+  handleRequest(req, res) {
+    res.end(new Date().toISOString())
+  }
+
+  throwError(e) {
+    console.error('throwError invoked')
+    throw e
+  }
+}
+
+new RestServer
