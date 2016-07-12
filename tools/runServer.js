@@ -39,7 +39,7 @@ function runServer(cb) {
   if (server) {
     server.kill('SIGTERM');
   }
-console.log(`serverPath: ${serverPath}`)
+
   server = cp.spawn('node', [serverPath], {
     env: Object.assign({ NODE_ENV: 'development' }, process.env),
     silent: false,
