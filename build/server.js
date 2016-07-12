@@ -46,7 +46,9 @@ module.exports =
 /* 0 */
 /***/ function(module, exports) {
 
-  "use strict";
+  'use strict';
+  
+  console.log('server first line');
 
 /***/ }
 /******/ ]);

@@ -11,6 +11,14 @@ function format(time) {
   return time.toTimeString().replace(/.*(\d{2}:\d{2}:\d{2}).*/, '$1');
 }
 
+/*
+fn: either:
+- a function returning a promise
+- an object with property default being a function returning a promise
+options: an optional argument provided to the function returning a promise
+
+return value: the promise
+*/
 function run(fn, options) {
   const task = typeof fn.default === 'undefined' ? fn : fn.default;
   const start = new Date();
@@ -26,6 +34,12 @@ function run(fn, options) {
   });
 }
 
+/*
+When run.js is invoked on the command line with one argument
+A .js file by that name is required, expected to have a function returning a promise as its default export.
+- on reject or exception, a stack trace is printed to standard error
+- if run.js is invoked without arguments, it does nothing
+*/
 if (process.mainModule.children.length === 0 && process.argv.length > 2) {
   delete require.cache[__filename]; // eslint-disable-line no-underscore-dangle
   const module = require(`./${process.argv[2]}.js`).default;
