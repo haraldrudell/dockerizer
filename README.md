@@ -5,7 +5,7 @@ Written by <a href=http://haraldrudell.com >Harald Rudell</a>
 
 ><dl>
   <dt>One-liner install, run and open a browser on Linux, press two control+c to exit:</dt>
-  <dd>git clone --depth 1 https://github.com/haraldrudell/nodedocker0.git && cd nodedocker0 && npm install && npm start</dd>
+  <dd>git clone --depth 1 https://github.com/haraldrudell/dockerizer.git && cd dockerizer && npm install && npm start</dd>
   <dt>then Dockerize:</dt>
   <dd>npm run dockerize</dd>
 </dl>
@@ -19,11 +19,12 @@ Written by <a href=http://haraldrudell.com >Harald Rudell</a>
   Google <a href=https://cloud.google.com/container-engine>Container Engine GKE</a>, or
   <a href=http://kubernetes.io>Kubernetes</a>
 - **Lambdarize** command and you’re in server-less <a href=https://aws.amazon.com/lambda/Lambdarize>AWS Lambda</a>
-- **Works as of** 2016-07-13
 
 <h2>Requirements</h2>
+- npm start
+  - Node.js 5+
 - npm run dockerize
-  - logged in user member of group docker
+  - logged in user is member of group docker
     - sudo usermod --append --groups docker *username*
     - logout/login
   - docker running

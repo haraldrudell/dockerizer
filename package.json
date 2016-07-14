@@ -1,20 +1,20 @@
 {
   "name": "esaws",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Manage AWS EC2 Container Service",
   "main": "index.js",
   "scripts": {
     "build": "babel-node tools/run build",
     "deploy": "babel-node tools/run deploy",
     "dockerize": "babel-node tools/run dockerize --release",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "babel-node tools/run start"
   },
   "author": "Harald Rudell <c@haraldrudell.com> (http://haraldrudell.com)",
   "license": "ISC",
   "dependencies": {
     "babel-polyfill": "^6.9.1",
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "which": "^1.2.10"
   },
   "devDependencies": {
     "assets-webpack-plugin": "^3.4.0",
