@@ -1,5 +1,5 @@
 /*
-© 2016-present Harald Rudell <harald.rudell@therudells.com> (http://haraldrudell.com)
+© 2016-present Harald Rudell <c@haraldrudell.com> (http://haraldrudell.com)
 All rights reserved.
 
 This source code is licensed under the ISC-style license found in the
