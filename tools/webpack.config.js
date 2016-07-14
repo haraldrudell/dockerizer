@@ -182,8 +182,8 @@ const serverConfig = extend(true, {}, config, {
 
     // Adds a banner to the top of each generated chunk
     // https://webpack.github.io/docs/list-of-plugins.html#bannerplugin
-    new webpack.BannerPlugin('require("source-map-support").install();',
-      { raw: true, entryOnly: false }),
+//    new webpack.BannerPlugin('require("source-map-support").install();',
+//      { raw: true, entryOnly: false }),
   ],
 
   node: {

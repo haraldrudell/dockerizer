@@ -13,7 +13,7 @@ class RestServer {
     new Promise((resolve, reject) => {
       this.app = express()
       this.app.get('*', this.handleRequest.bind(this))
-      this.server = this.app.listen(3002, '127.0.0.1', e => {
+      this.server = this.app.listen(3002, '0.0.0.0', e => {
         if (!e) resolve(this.server.address())
         else reject(e)
       })

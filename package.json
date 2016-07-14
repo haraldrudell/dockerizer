@@ -5,18 +5,20 @@
   "main": "index.js",
   "scripts": {
     "build": "babel-node tools/run build",
-    "deploy": "babel-node tools/deploy",
+    "deploy": "babel-node tools/run deploy",
+    "dockerize": "babel-node tools/run dockerize --release",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "babel-node tools/run start"
   },
   "author": "Harald Rudell <c@haraldrudell.com> (http://haraldrudell.com)",
   "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.4.6",
+    "babel-polyfill": "^6.9.1",
     "express": "^4.14.0"
   },
   "devDependencies": {
     "assets-webpack-plugin": "^3.4.0",
+    "aws-sdk": "^2.4.6",
     "babel-cli": "^6.10.1",
     "babel-loader": "^6.2.4",
     "babel-plugin-transform-runtime": "^6.9.0",

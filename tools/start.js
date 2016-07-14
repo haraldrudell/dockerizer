@@ -1,8 +1,8 @@
-import clean from './clean';
-import copy from './copy';
-import bundle from './bundle';
-import run from './run';
-import runServer from './runServer';
+import clean from './clean'
+import copy from './copy'
+import bundle from './bundle'
+import run from './run'
+import runServer from './runServer'
 
 const DEBUG = !process.argv.includes('--release');
 
